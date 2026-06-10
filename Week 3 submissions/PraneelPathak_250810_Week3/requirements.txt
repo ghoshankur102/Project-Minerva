@@ -1,0 +1,7 @@
+langchain_core
+python-dotenv
+langchain_google_genai
+langgraph
+beautifulsoup4
+langchain-groq
+langchain-openai
