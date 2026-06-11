@@ -1,0 +1,338 @@
+[
+  {
+    "url": "https://codeforces.com/problemset/problem/1511/C",
+    "title": "C. Yet Another Card Deck",
+    "statement": "C. Yet Another Card Deck\ntime limit per test\n2 seconds\nmemory limit per test\n256 megabytes\ninput\nstandard input\noutput\nstandard output\nYou have a card deck of $$$n$$$ cards, numbered from top to bottom, i. e. the top card has index $$$1$$$ and bottom card — index $$$n$$$. Each card has its color: the $$$i$$$-th card has color $$$a_i$$$.\nYou should process $$$q$$$ queries. The $$$j$$$-th query is described by integer $$$t_j$$$. For each query you should:\nfind the highest card in the deck with color $$$t_j$$$, i. e. the card with minimum index;\nprint the position of the card you found;\ntake the card and place it on top of the deck.\nInput\nThe first line contains two integers $$$n$$$ and $$$q$$$ ($$$2 \\le n \\le 3 \\cdot 10^5$$$; $$$1 \\le q \\le 3 \\cdot 10^5$$$) — the number of cards in the deck and the number of queries.\nThe second line contains $$$n$$$ integers $$$a_1, a_2, \\dots, a_n$$$ ($$$1 \\le a_i \\le 50$$$) — the colors of cards.\nThe third line contains $$$q$$$ integers $$$t_1, t_2, \\dots, t_q$$$ ($$$1 \\le t_j \\le 50$$$) — the query colors. It's guaranteed that\nqueries ask only colors that are present in the deck\n.\nOutput\nPrint $$$q$$$ integers — the answers for each query.\nExample\nInput\n7 5\n2 1 1 4 3 3 1\n3 2 1 1 4\nOutput\n5 2 3 1 5\nNote\nDescription of the sample:\nthe deck is $$$[2, 1, 1, 4, \\underline{3}, 3, 1]$$$ and the first card with color $$$t_1 = 3$$$ has position $$$5$$$;\nthe deck is $$$[3, \\underline{2}, 1, 1, 4, 3, 1]$$$ and the first card with color $$$t_2 = 2$$$ has position $$$2$$$;\nthe deck is $$$[2, 3, \\underline{1}, 1, 4, 3, 1]$$$ and the first card with color $$$t_3 = 1$$$ has position $$$3$$$;\nthe deck is $$$[\\underline{1}, 2, 3, 1, 4, 3, 1]$$$ and the first card with color $$$t_4 = 1$$$ has position $$$1$$$;\nthe deck is $$$[1, 2, 3, 1, \\underline{4}, 3, 1]$$$ and the first card with color $$$t_5 = 4$$$ has position $$$5$$$.",
+    "samples": [
+      {
+        "input": "7 5\n2 1 1 4 3 3 1\n3 2 1 1 4\n",
+        "expected_output": "5 2 3 1 5\n"
+      }
+    ]
+  },
+  {
+    "url": "http://codeforces.com/problemset/problem/1610/B",
+    "title": "B. Kalindrome Array",
+    "statement": "B. Kalindrome Array\ntime limit per test\n1 second\nmemory limit per test\n256 megabytes\ninput\nstandard input\noutput\nstandard output\nAn array $$$[b_1, b_2, \\ldots, b_m]$$$ is a palindrome, if $$$b_i = b_{m+1-i}$$$ for each $$$i$$$ from $$$1$$$ to $$$m$$$. Empty array is also a palindrome.\nAn array is called\nkalindrome\n, if the following condition holds:\nIt's possible to select some integer $$$x$$$ and delete some of the elements of the array equal to $$$x$$$, so that the remaining array (after gluing together the remaining parts) is a palindrome.\nNote that you don't have to delete all elements equal to $$$x$$$, and you don't have to delete at least one element equal to $$$x$$$.\nFor example :\n$$$[1, 2, 1]$$$ is kalindrome because you can simply not delete a single element.\n$$$[3, 1, 2, 3, 1]$$$ is kalindrome because you can choose $$$x = 3$$$ and delete both elements equal to $$$3$$$, obtaining array $$$[1, 2, 1]$$$, which is a palindrome.\n$$$[1, 2, 3]$$$ is not kalindrome.\nYou are given an array $$$[a_1, a_2, \\ldots, a_n]$$$. Determine if $$$a$$$ is kalindrome or not.\nInput\nThe first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases. The description of the test cases follows.\nThe first line of each test case contains a single integer $$$n$$$ ($$$1 \\le n \\le 2 \\cdot 10^5$$$) — the length of the array.\nThe second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le n$$$) — elements of the array.\nIt's guaranteed that the sum of $$$n$$$ over all test cases won't exceed $$$2 \\cdot 10^5$$$.\nOutput\nFor each test case, print\nYES\nif $$$a$$$ is kalindrome and\nNO\notherwise. You can print each letter in any case.\nExample\nInput\n4\n1\n1\n2\n1 2\n3\n1 2 3\n5\n1 4 4 1 4\nOutput\nYES\nYES\nNO\nYES\nNote\nIn the first test case, array $$$[1]$$$ is already a palindrome, so it's a kalindrome as well.\nIn the second test case, we can choose $$$x = 2$$$, delete the second element, and obtain array $$$[1]$$$, which is a palindrome.\nIn the third test case, it's impossible to obtain a palindrome.\nIn the fourth test case, you can choose $$$x = 4$$$ and delete the fifth element, obtaining $$$[1, 4, 4, 1]$$$. You also can choose $$$x = 1$$$, delete the first and the fourth elements, and obtain $$$[4, 4, 4]$$$.",
+    "samples": [
+      {
+        "input": "4\n1\n1\n2\n1 2\n3\n1 2 3\n5\n1 4 4 1 4\n",
+        "expected_output": "YES\nYES\nNO\nYES\n"
+      }
+    ]
+  },
+  {
+    "url": "https://codeforces.com/problemset/problem/414/B",
+    "title": "B. Mashmokh and ACM",
+    "statement": "B. Mashmokh and ACM\ntime limit per test\n1 second\nmemory limit per test\n256 megabytes\ninput\nstdin\noutput\nstdout\nMashmokh's boss, Bimokh, didn't like Mashmokh. So he fired him. Mashmokh decided to go to university and participate in ACM instead of finding a new job. He wants to become a member of Bamokh's team. In order to join he was given some programming tasks and one week to solve them. Mashmokh is not a very experienced programmer. Actually he is not a programmer at all. So he wasn't able to solve them. That's why he asked you to help him with these tasks. One of these tasks is the following.\nA sequence of\nl\nintegers\nb\n1\n,\nb\n2\n, ...,\nb\nl\n(1 ≤\nb\n1\n≤\nb\n2\n≤ ... ≤\nb\nl\n≤\nn\n)\nis called\ngood\nif each number divides (without a remainder) by the next number in the sequence. More formally\nfor all\ni\n(1 ≤\ni\n≤\nl\n- 1)\n.\nGiven\nn\nand\nk\nfind the number of good sequences of length\nk\n. As the answer can be rather large print it modulo\n1000000007\n(10\n9\n+ 7)\n.\nInput\nThe first line of input contains two space-separated integers\nn\n,\nk\n(1 ≤\nn\n,\nk\n≤ 2000)\n.\nOutput\nOutput a single integer — the number of good sequences of length\nk\nmodulo\n1000000007\n(10\n9\n+ 7)\n.\nExamples\nInput\n3 2\nOutput\n5\nInput\n6 4\nOutput\n39\nInput\n2 1\nOutput\n2\nNote\nIn the first sample the good sequences are:\n[1, 1], [2, 2], [3, 3], [1, 2], [1, 3]\n.",
+    "samples": [
+      {
+        "input": "3 2\n",
+        "expected_output": "5\n"
+      },
+      {
+        "input": "6 4\n",
+        "expected_output": "39\n"
+      },
+      {
+        "input": "2 1\n",
+        "expected_output": "2\n"
+      }
+    ]
+  },
+  {
+    "url": "https://codeforces.com/problemset/problem/1167/C",
+    "title": "C. News Distribution",
+    "statement": "C. News Distribution\ntime limit per test\n2 seconds\nmemory limit per test\n256 megabytes\ninput\nstandard input\noutput\nstandard output\nIn some social network, there are $$$n$$$ users communicating with each other in $$$m$$$ groups of friends. Let's analyze the process of distributing some news between users.\nInitially, some user $$$x$$$ receives the news from some source. Then he or she sends the news to his or her friends (two users are friends if there is at least one group such that both of them belong to this group). Friends continue sending the news to their friends, and so on. The process ends when there is no pair of friends such that one of them knows the news, and another one doesn't know.\nFor each user $$$x$$$ you have to determine what is the number of users that will know the news if initially only user $$$x$$$ starts distributing it.\nInput\nThe first line contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n, m \\le 5 \\cdot 10^5$$$) — the number of users and the number of groups of friends, respectively.\nThen $$$m$$$ lines follow, each describing a group of friends. The $$$i$$$-th line begins with integer $$$k_i$$$ ($$$0 \\le k_i \\le n$$$) — the number of users in the $$$i$$$-th group. Then $$$k_i$$$\ndistinct\nintegers follow, denoting the users belonging to the $$$i$$$-th group.\nIt is guaranteed that $$$\\sum \\limits_{i = 1}^{m} k_i \\le 5 \\cdot 10^5$$$.\nOutput\nPrint $$$n$$$ integers. The $$$i$$$-th integer should be equal to the number of users that will know the news if user $$$i$$$ starts distributing it.\nExample\nInput\n7 5\n3 2 5 4\n0\n2 1 2\n1 1\n2 6 7\nOutput\n4 4 1 4 4 2 2",
+    "samples": [
+      {
+        "input": "7 5\n3 2 5 4\n0\n2 1 2\n1 1\n2 6 7\n",
+        "expected_output": "4 4 1 4 4 2 2\n"
+      }
+    ]
+  },
+  {
+    "url": "https://codeforces.com/problemset/problem/1350/B",
+    "title": "B. Orac and Models",
+    "statement": "B. Orac and Models\ntime limit per test\n3 seconds\nmemory limit per test\n256 megabytes\ninput\nstandard input\noutput\nstandard output\nThere are $$$n$$$ models in the shop numbered from $$$1$$$ to $$$n$$$, with sizes $$$s_1, s_2, \\ldots, s_n$$$.\nOrac will buy some of the models and will arrange them in the order of increasing numbers (i.e. indices, but not sizes).\nOrac thinks that the obtained arrangement is\nbeatiful\n, if for any two adjacent models with indices $$$i_j$$$ and $$$i_{j+1}$$$ (note that $$$i_j  \\lt  i_{j+1}$$$, because Orac arranged them properly), $$$i_{j+1}$$$ is divisible by $$$i_j$$$ and $$$s_{i_j}  \\lt  s_{i_{j+1}}$$$.\nFor example, for $$$6$$$ models with sizes $$$\\{3, 6, 7, 7, 7, 7\\}$$$, he can buy models with indices $$$1$$$, $$$2$$$, and $$$6$$$, and the obtained arrangement will be beautiful. Also, note that the arrangement with exactly one model is also considered beautiful.\nOrac wants to know the maximum number of models that he can buy, and he may ask you these queries many times.\nInput\nThe first line contains one integer $$$t\\ (1 \\le t\\le 100)$$$: the number of queries.\nEach query contains two lines. The first line contains one integer $$$n\\ (1\\le n\\le 100\\,000)$$$: the number of models in the shop, and the second line contains $$$n$$$ integers $$$s_1,\\dots,s_n\\ (1\\le s_i\\le 10^9)$$$: the sizes of models.\nIt is guaranteed that the total sum of $$$n$$$ is at most $$$100\\,000$$$.\nOutput\nPrint $$$t$$$ lines, the $$$i$$$-th of them should contain the maximum number of models that Orac can buy for the $$$i$$$-th query.\nExample\nInput\n4\n4\n5 3 4 6\n7\n1 4 2 3 6 4 9\n5\n5 4 3 2 1\n1\n9\nOutput\n2\n3\n1\n1\nNote\nIn the first query, for example, Orac can buy models with indices $$$2$$$ and $$$4$$$, the arrangement will be beautiful because $$$4$$$ is divisible by $$$2$$$ and $$$6$$$ is more than $$$3$$$. By enumerating, we can easily find that there are no beautiful arrangements with more than two models.\nIn the second query, Orac can buy models with indices $$$1$$$, $$$3$$$, and $$$6$$$. By enumerating, we can easily find that there are no beautiful arrangements with more than three models.\nIn the third query, there are no beautiful arrangements with more than one model.",
+    "samples": [
+      {
+        "input": "4\n4\n5 3 4 6\n7\n1 4 2 3 6 4 9\n5\n5 4 3 2 1\n1\n9\n",
+        "expected_output": "2\n3\n1\n1\n"
+      }
+    ]
+  },
+  {
+    "url": "https://codeforces.com/problemset/problem/845/C",
+    "title": "C. Two TVs",
+    "statement": "C. Two TVs\ntime limit per test\n2 seconds\nmemory limit per test\n256 megabytes\ninput\nstandard input\noutput\nstandard output\nPolycarp is a great fan of television.\nHe wrote down all the TV programs he is interested in for today. His list contains\nn\nshows,\ni\n-th of them starts at moment\nl\ni\nand ends at moment\nr\ni\n.\nPolycarp owns two TVs. He can watch two different shows simultaneously with two TVs but he can only watch one show at any given moment on a single TV. If one show ends at the same moment some other show starts then you can't watch them on a single TV.\nPolycarp wants to check out all\nn\nshows. Are two TVs enough to do so?\nInput\nThe first line contains one integer\nn\n(\n1 ≤\nn\n≤ 2·10\n5\n) — the number of shows.\nEach of the next\nn\nlines contains two integers\nl\ni\nand\nr\ni\n(\n0 ≤\nl\ni\n<\nr\ni\n≤ 10\n9\n) — starting and ending time of\ni\n-th show.\nOutput\nIf Polycarp is able to check out all the shows using only two TVs then print \"\nYES\n\" (without quotes). Otherwise, print \"\nNO\n\" (without quotes).\nExamples\nInput\n3\n1 2\n2 3\n4 5\nOutput\nYES\nInput\n4\n1 2\n2 3\n2 3\n1 2\nOutput\nNO",
+    "samples": [
+      {
+        "input": "3\n1 2\n2 3\n4 5\n",
+        "expected_output": "YES\n"
+      },
+      {
+        "input": "4\n1 2\n2 3\n2 3\n1 2\n",
+        "expected_output": "NO\n"
+      }
+    ]
+  },
+  {
+    "url": "https://codeforces.com/problemset/problem/1101/C",
+    "title": "C. Division and Union",
+    "statement": "C. Division and Union\ntime limit per test\n2 seconds\nmemory limit per test\n256 megabytes\ninput\nstandard input\noutput\nstandard output\nThere are $$$n$$$ segments $$$[l_i, r_i]$$$ for $$$1 \\le i \\le n$$$. You should divide all segments into two\nnon-empty\ngroups in such way that there is no pair of segments from different groups which have at least one common point, or say that it's impossible to do it. Each segment should belong to exactly one group.\nTo optimize testing process you will be given multitest.\nInput\nThe first line contains one integer $$$T$$$ ($$$1 \\le T \\le 50000$$$) — the number of queries. Each query contains description of the set of segments. Queries are independent.\nFirst line of each query contains single integer $$$n$$$ ($$$2 \\le n \\le 10^5$$$) — number of segments. It is guaranteed that $$$\\sum{n}$$$ over all queries does not exceed $$$10^5$$$.\nThe next $$$n$$$ lines contains two integers $$$l_i$$$, $$$r_i$$$ per line ($$$1 \\le l_i \\le r_i \\le 2 \\cdot 10^5$$$) — the $$$i$$$-th segment.\nOutput\nFor each query print $$$n$$$ integers $$$t_1, t_2, \\dots, t_n$$$ ($$$t_i \\in \\{1, 2\\}$$$) — for each segment (in the same order as in the input) $$$t_i$$$ equals $$$1$$$ if the $$$i$$$-th segment will belongs to the first group and $$$2$$$ otherwise.\nIf there are multiple answers, you can print any of them. If there is no answer, print $$$-1$$$.\nExample\nInput\n3\n2\n5 5\n2 3\n3\n3 5\n2 3\n2 3\n3\n3 3\n4 4\n5 5\nOutput\n2 1 \n-1\n1 1 2\nNote\nIn the first query the first and the second segments should be in different groups, but exact numbers don't matter.\nIn the second query the third segment intersects with the first and the second segments, so they should be in the same group, but then the other group becomes empty, so answer is $$$-1$$$.\nIn the third query we can distribute segments in any way that makes groups non-empty, so any answer of $$$6$$$ possible is correct.",
+    "samples": [
+      {
+        "input": "3\n2\n5 5\n2 3\n3\n3 5\n2 3\n2 3\n3\n3 3\n4 4\n5 5\n",
+        "expected_output": "2 1 \n-1\n1 1 2\n"
+      }
+    ]
+  },
+  {
+    "url": "https://codeforces.com/problemset/problem/891/A",
+    "title": "A. Pride",
+    "statement": "A. Pride\ntime limit per test\n2 seconds\nmemory limit per test\n256 megabytes\ninput\nstandard input\noutput\nstandard output\nYou have an array\na\nwith length\nn\n, you can perform operations. Each operation is like this: choose two\nadjacent\nelements from\na\n, say\nx\nand\ny\n, and replace one of them with\ngcd\n(\nx\n,\ny\n)\n, where\ngcd\ndenotes the\ngreatest common divisor\n.\nWhat is the minimum number of operations you need to make all of the elements equal to\n1\n?\nInput\nThe first line of the input contains one integer\nn\n(\n1 ≤\nn\n≤ 2000\n) — the number of elements in the array.\nThe second line contains\nn\nspace separated integers\na\n1\n,\na\n2\n, ...,\na\nn\n(\n1 ≤\na\ni\n≤ 10\n9\n) — the elements of the array.\nOutput\nPrint\n-1\n, if it is impossible to turn all numbers to\n1\n. Otherwise, print the minimum number of operations needed to make all numbers equal to\n1\n.\nExamples\nInput\n5\n2 2 3 4 6\nOutput\n5\nInput\n4\n2 4 6 8\nOutput\n-1\nInput\n3\n2 6 9\nOutput\n4\nNote\nIn the first sample you can turn all numbers to\n1\nusing the following\n5\nmoves:\n[2, 2, 3, 4, 6]\n.\n[2, 1, 3, 4, 6]\n[2, 1, 3, 1, 6]\n[2, 1, 1, 1, 6]\n[1, 1, 1, 1, 6]\n[1, 1, 1, 1, 1]\nWe can prove that in this case it is not possible to make all numbers one using less than\n5\nmoves.",
+    "samples": [
+      {
+        "input": "5\n2 2 3 4 6\n",
+        "expected_output": "5\n"
+      },
+      {
+        "input": "4\n2 4 6 8\n",
+        "expected_output": "-1\n"
+      },
+      {
+        "input": "3\n2 6 9\n",
+        "expected_output": "4\n"
+      }
+    ]
+  },
+  {
+    "url": "https://codeforces.com/problemset/problem/1084/C",
+    "title": "C. The Fair Nut and String",
+    "statement": "C. The Fair Nut and String\ntime limit per test\n1 second\nmemory limit per test\n256 megabytes\ninput\nstandard input\noutput\nstandard output\nThe Fair Nut found a string $$$s$$$. The string consists of lowercase Latin letters. The Nut is a curious guy, so he wants to find the number of strictly increasing sequences $$$p_1, p_2, \\ldots, p_k$$$, such that:\nFor each $$$i$$$ ($$$1 \\leq i \\leq k$$$), $$$s_{p_i} =$$$\n'a'\n.\nFor each $$$i$$$ ($$$1 \\leq i  \\lt  k$$$), there is such $$$j$$$ that $$$p_i  \\lt  j  \\lt  p_{i + 1}$$$ and $$$s_j =$$$\n'b'\n.\nThe Nut is upset because he doesn't know how to find the number. Help him.\nThis number should be calculated modulo $$$10^9 + 7$$$.\nInput\nThe first line contains the string $$$s$$$ ($$$1 \\leq |s| \\leq 10^5$$$) consisting of lowercase Latin letters.\nOutput\nIn a single line print the answer to the problem — the number of such sequences $$$p_1, p_2, \\ldots, p_k$$$ modulo $$$10^9 + 7$$$.\nExamples\nInput\nabbaa\nOutput\n5\nInput\nbaaaa\nOutput\n4\nInput\nagaa\nOutput\n3\nNote\nIn the first example, there are $$$5$$$ possible sequences. $$$[1]$$$, $$$[4]$$$, $$$[5]$$$, $$$[1, 4]$$$, $$$[1, 5]$$$.\nIn the second example, there are $$$4$$$ possible sequences. $$$[2]$$$, $$$[3]$$$, $$$[4]$$$, $$$[5]$$$.\nIn the third example, there are $$$3$$$ possible sequences. $$$[1]$$$, $$$[3]$$$, $$$[4]$$$.",
+    "samples": [
+      {
+        "input": "abbaa\n",
+        "expected_output": "5\n"
+      },
+      {
+        "input": "baaaa\n",
+        "expected_output": "4\n"
+      },
+      {
+        "input": "agaa\n",
+        "expected_output": "3\n"
+      }
+    ]
+  },
+  {
+    "url": "https://codeforces.com/problemset/problem/1106/D",
+    "title": "D. Lunar New Year and a Wander",
+    "statement": "D. Lunar New Year and a Wander\ntime limit per test\n3 seconds\nmemory limit per test\n256 megabytes\ninput\nstandard input\noutput\nstandard output\nLunar New Year is approaching, and Bob decides to take a wander in a nearby park.\nThe park can be represented as a connected graph with $$$n$$$ nodes and $$$m$$$ bidirectional edges. Initially Bob is at the node $$$1$$$ and he records $$$1$$$ on his notebook. He can wander from one node to another through those bidirectional edges. Whenever he visits a node not recorded on his notebook, he records it. After he visits all nodes at least once, he stops wandering, thus finally a permutation of nodes $$$a_1, a_2, \\ldots, a_n$$$ is recorded.\nWandering is a boring thing, but solving problems is fascinating. Bob wants to know the lexicographically smallest sequence of nodes he can record while wandering. Bob thinks this problem is trivial, and he wants you to solve it.\nA sequence $$$x$$$ is lexicographically smaller than a sequence $$$y$$$ if and only if one of the following holds:\n$$$x$$$ is a prefix of $$$y$$$, but $$$x \\ne y$$$ (this is impossible in this problem as all considered sequences have the same length);\nin the first position where $$$x$$$ and $$$y$$$ differ, the sequence $$$x$$$ has a smaller element than the corresponding element in $$$y$$$.\nInput\nThe first line contains two positive integers $$$n$$$ and $$$m$$$ ($$$1 \\leq n, m \\leq 10^5$$$), denoting the number of nodes and edges, respectively.\nThe following $$$m$$$ lines describe the bidirectional edges in the graph. The $$$i$$$-th of these lines contains two integers $$$u_i$$$ and $$$v_i$$$ ($$$1 \\leq u_i, v_i \\leq n$$$), representing the nodes the $$$i$$$-th edge connects.\nNote that the graph can have multiple edges connecting the same two nodes and self-loops. It is guaranteed that the graph is connected.\nOutput\nOutput a line containing the lexicographically smallest sequence $$$a_1, a_2, \\ldots, a_n$$$ Bob can record.\nExamples\nInput\n3 2\n1 2\n1 3\nOutput\n1 2 3\nInput\n5 5\n1 4\n3 4\n5 4\n3 2\n1 5\nOutput\n1 4 3 2 5\nInput\n10 10\n1 4\n6 8\n2 5\n3 7\n9 4\n5 6\n3 4\n8 10\n8 9\n1 10\nOutput\n1 4 3 7 9 8 6 5 2 10\nNote\nIn the first sample, Bob's optimal wandering path could be $$$1 \\rightarrow 2 \\rightarrow 1 \\rightarrow 3$$$. Therefore, Bob will obtain the sequence $$$\\{1, 2, 3\\}$$$, which is the lexicographically smallest one.\nIn the second sample, Bob's optimal wandering path could be $$$1 \\rightarrow 4 \\rightarrow 3 \\rightarrow 2 \\rightarrow 3 \\rightarrow 4 \\rightarrow 1 \\rightarrow 5$$$. Therefore, Bob will obtain the sequence $$$\\{1, 4, 3, 2, 5\\}$$$, which is the lexicographically smallest one.",
+    "samples": [
+      {
+        "input": "3 2\n1 2\n1 3\n",
+        "expected_output": "1 2 3\n"
+      },
+      {
+        "input": "5 5\n1 4\n3 4\n5 4\n3 2\n1 5\n",
+        "expected_output": "1 4 3 2 5\n"
+      },
+      {
+        "input": "10 10\n1 4\n6 8\n2 5\n3 7\n9 4\n5 6\n3 4\n8 10\n8 9\n1 10\n",
+        "expected_output": "1 4 3 7 9 8 6 5 2 10\n"
+      }
+    ]
+  },
+  {
+    "url": "https://codeforces.com/problemset/problem/1475/E",
+    "title": "E. Advertising Agency",
+    "statement": "E. Advertising Agency\ntime limit per test\n2 seconds\nmemory limit per test\n256 megabytes\ninput\nstandard input\noutput\nstandard output\nMasha works in an advertising agency. In order to promote the new brand, she wants to conclude contracts with some bloggers. In total, Masha has connections of $$$n$$$ different bloggers. Blogger numbered $$$i$$$ has $$$a_i$$$ followers.\nSince Masha has a limited budget, she can only sign a contract with $$$k$$$ different bloggers. Of course, Masha wants her ad to be seen by as many people as possible. Therefore, she must hire bloggers with the maximum total number of followers.\nHelp her, find the number of ways to select $$$k$$$ bloggers so that the total number of their followers is maximum possible. Two ways are considered different if there is at least one blogger in the first way, which is not in the second way. Masha believes that all bloggers have different followers (that is, there is no follower who would follow two different bloggers).\nFor example, if $$$n=4$$$, $$$k=3$$$, $$$a=[1, 3, 1, 2]$$$, then Masha has two ways to select $$$3$$$ bloggers with the maximum total number of followers:\nconclude contracts with bloggers with numbers $$$1$$$, $$$2$$$ and $$$4$$$. In this case, the number of followers will be equal to $$$a_1 + a_2 + a_4 = 6$$$.\nconclude contracts with bloggers with numbers $$$2$$$, $$$3$$$ and $$$4$$$. In this case, the number of followers will be equal to $$$a_2 + a_3 + a_4 = 6$$$.\nSince the answer can be quite large,\noutput it modulo $$$10^9+7$$$\n.\nInput\nThe first line contains one integer $$$t$$$ ($$$1 \\le t \\le 1000$$$) — the number of test cases. Then $$$t$$$ test cases follow.\nThe first line of each test case contains two integers $$$n$$$ and $$$k$$$ ($$$1 \\le k \\le n \\le 1000$$$) — the number of bloggers and how many of them you can sign a contract with.\nThe second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots a_n$$$ ($$$1 \\le a_i \\le n$$$) — the number of followers of each blogger.\nIt is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$1000$$$.\nOutput\nFor each test case, on a separate line output one integer — the number of ways to select $$$k$$$ bloggers so that the total number of their followers is maximum possible.\nExample\nInput\n3\n4 3\n1 3 1 2\n4 2\n1 1 1 1\n2 1\n1 2\nOutput\n2\n6\n1\nNote\nThe test case is explained in the statements.\nIn the second test case, the following ways are valid:\nconclude contracts with bloggers with numbers $$$1$$$ and $$$2$$$. In this case, the number of followers will be equal to $$$a_1 + a_2 = 2$$$;\nconclude contracts with bloggers with numbers $$$1$$$ and $$$3$$$. In this case, the number of followers will be equal to $$$a_1 + a_3 = 2$$$;\nconclude contracts with bloggers with numbers $$$1$$$ and $$$4$$$. In this case, the number of followers will be equal to $$$a_1 + a_4 = 2$$$;\nconclude contracts with bloggers with numbers $$$2$$$ and $$$3$$$. In this case, the number of followers will be equal to $$$a_2 + a_3 = 2$$$;\nconclude contracts with bloggers with numbers $$$2$$$ and $$$4$$$. In this case, the number of followers will be equal to $$$a_2 + a_4 = 2$$$;\nconclude contracts with bloggers with numbers $$$3$$$ and $$$4$$$. In this case, the number of followers will be equal to $$$a_3 + a_4 = 2$$$.\nIn the third test case, the following ways are valid:\nconcludes a contract with a blogger with the number $$$2$$$. In this case, the number of followers will be equal to $$$a_2 = 2$$$.",
+    "samples": [
+      {
+        "input": "3\n4 3\n1 3 1 2\n4 2\n1 1 1 1\n2 1\n1 2\n",
+        "expected_output": "2\n6\n1\n"
+      }
+    ]
+  },
+  {
+    "url": "https://codeforces.com/problemset/problem/1610/C",
+    "title": "C. Keshi Is Throwing a Party",
+    "statement": "C. Keshi Is Throwing a Party\ntime limit per test\n1 second\nmemory limit per test\n256 megabytes\ninput\nstandard input\noutput\nstandard output\nKeshi is throwing a party and he wants everybody in the party to be happy.\nHe has $$$n$$$ friends. His $$$i$$$-th friend has $$$i$$$ dollars.\nIf you invite the $$$i$$$-th friend to the party, he will be happy only if at most $$$a_i$$$ people in the party are strictly richer than him and at most $$$b_i$$$ people are strictly poorer than him.\nKeshi wants to invite as many people as possible. Find the maximum number of people he can invite to the party so that every invited person would be happy.\nInput\nThe first line contains a single integer $$$t$$$ $$$(1\\le t\\le 10^4)$$$ — the number of test cases. The description of the test cases follows.\nThe first line of each test case contains a single integer $$$n$$$ $$$(1\\le n\\le 2 \\cdot 10^5)$$$ — the number of Keshi's friends.\nThe $$$i$$$-th of the following $$$n$$$ lines contains two integers $$$a_i$$$ and $$$b_i$$$ $$$(0 \\le a_i, b_i  \\lt  n)$$$.\nIt is guaranteed that the sum of $$$n$$$ over all test cases doesn't exceed $$$2 \\cdot 10^5$$$.\nOutput\nFor each test case print the maximum number of people Keshi can invite.\nExample\nInput\n3\n3\n1 2\n2 1\n1 1\n2\n0 0\n0 1\n2\n1 0\n0 1\nOutput\n2\n1\n2\nNote\nIn the first test case, he invites the first and the second person. If he invites all of them, the third person won't be happy because there will be more than $$$1$$$ person poorer than him.",
+    "samples": [
+      {
+        "input": "3\n3\n1 2\n2 1\n1 1\n2\n0 0\n0 1\n2\n1 0\n0 1\n",
+        "expected_output": "2\n1\n2\n"
+      }
+    ]
+  },
+  {
+    "url": "https://codeforces.com/problemset/problem/1775/C",
+    "title": "C. Interesting Sequence",
+    "statement": "C. Interesting Sequence\ntime limit per test\n1 second\nmemory limit per test\n256 megabytes\ninput\nstandard input\noutput\nstandard output\nPetya and his friend, robot Petya++, like to solve exciting math problems.\nOne day Petya++ came up with the numbers $$$n$$$ and $$$x$$$ and wrote the following equality on the board: $$$$$$n\\ \\&\\ (n+1)\\ \\&\\ \\dots\\ \\&\\ m = x,$$$$$$ where $$$\\&$$$ denotes the\nbitwise AND operation\n. Then he suggested his friend Petya find such a minimal $$$m$$$ ($$$m \\ge n$$$) that the equality on the board holds.\nUnfortunately, Petya couldn't solve this problem in his head and decided to ask for computer help. He quickly wrote a program and found the answer.\nCan you solve this difficult problem?\nInput\nEach test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 2000$$$). The description of the test cases follows.\nThe only line of each test case contains two integers $$$n$$$, $$$x$$$ ($$$0\\le n, x \\le 10^{18}$$$).\nOutput\nFor every test case, output the smallest possible value of $$$m$$$ such that equality holds.\nIf the equality does not hold for any $$$m$$$, print $$$-1$$$ instead.\nWe can show that if the required $$$m$$$ exists, it does not exceed $$$5 \\cdot 10^{18}$$$.\nExample\nInput\n5\n10 8\n10 10\n10 42\n20 16\n1000000000000000000 0\nOutput\n12\n10\n-1\n24\n1152921504606846976\nNote\nIn the first example, $$$10\\ \\&\\ 11 = 10$$$, but $$$10\\ \\&\\ 11\\ \\&\\ 12 = 8$$$, so the answer is $$$12$$$.\nIn the second example, $$$10 = 10$$$, so the answer is $$$10$$$.\nIn the third example, we can see that the required $$$m$$$ does not exist, so we have to print $$$-1$$$.",
+    "samples": [
+      {
+        "input": "5\n10 8\n10 10\n10 42\n20 16\n1000000000000000000 0\n",
+        "expected_output": "12\n10\n-1\n24\n1152921504606846976\n"
+      }
+    ]
+  },
+  {
+    "url": "https://codeforces.com/problemset/problem/1516/C",
+    "title": "C. Baby Ehab Partitions Again",
+    "statement": "C. Baby Ehab Partitions Again\ntime limit per test\n2 seconds\nmemory limit per test\n256 megabytes\ninput\nstandard input\noutput\nstandard output\nBaby Ehab was toying around with arrays. He has an array $$$a$$$ of length $$$n$$$. He defines an array to be good if there's no way to partition it into $$$2$$$ subsequences such that the sum of the elements in the first is equal to the sum of the elements in the second. Now he wants to remove the minimum number of elements in $$$a$$$ so that it becomes a good array. Can you help him?\nA sequence $$$b$$$ is a subsequence of an array $$$a$$$ if $$$b$$$ can be obtained from $$$a$$$ by deleting some (possibly zero or all) elements. A partitioning of an array is a way to divide it into $$$2$$$ subsequences such that every element belongs to exactly one subsequence, so you must use all the elements, and you can't share any elements.\nInput\nThe first line contains an integer $$$n$$$ ($$$2 \\le n \\le 100$$$) — the length of the array $$$a$$$.\nThe second line contains $$$n$$$ integers $$$a_1$$$, $$$a_2$$$, $$$\\ldots$$$, $$$a_{n}$$$ ($$$1 \\le a_i \\le 2000$$$) — the elements of the array $$$a$$$.\nOutput\nThe first line should contain the minimum number of elements you need to remove.\nThe second line should contain the indices of the elements you're removing, separated by spaces.\nWe can show that an answer always exists. If there are multiple solutions, you can print any.\nExamples\nInput\n4\n6 3 9 12\nOutput\n1\n2\nInput\n2\n1 2\nOutput\n0\nNote\nIn the first example, you can partition the array into $$$[6,9]$$$ and $$$[3,12]$$$, so you must remove at least $$$1$$$ element. Removing $$$3$$$ is sufficient.\nIn the second example, the array is already good, so you don't need to remove any elements.",
+    "samples": [
+      {
+        "input": "4\n6 3 9 12\n",
+        "expected_output": "1\n2\n"
+      },
+      {
+        "input": "2\n1 2\n",
+        "expected_output": "0\n"
+      }
+    ]
+  },
+  {
+    "url": "https://codeforces.com/problemset/problem/1598/D",
+    "title": "D. Training Session",
+    "statement": "D. Training Session\ntime limit per test\n2 seconds\nmemory limit per test\n256 megabytes\ninput\nstandard input\noutput\nstandard output\nMonocarp is the coach of the Berland State University programming teams. He decided to compose a problemset for a training session for his teams.\nMonocarp has $$$n$$$ problems that none of his students have seen yet. The $$$i$$$-th problem has a topic $$$a_i$$$ (an integer from $$$1$$$ to $$$n$$$) and a difficulty $$$b_i$$$ (an integer from $$$1$$$ to $$$n$$$). All problems are different, that is, there are no two tasks that have the same topic and difficulty at the same time.\nMonocarp decided to select exactly $$$3$$$ problems from $$$n$$$ problems for the problemset. The problems should satisfy\nat least one\nof two conditions (possibly, both):\nthe topics of all three selected problems are different;\nthe difficulties of all three selected problems are different.\nYour task is to determine the number of ways to select three problems for the problemset.\nInput\nThe first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 50000$$$) — the number of testcases.\nThe first line of each testcase contains an integer $$$n$$$ ($$$3 \\le n \\le 2 \\cdot 10^5$$$) — the number of problems that Monocarp have.\nIn the $$$i$$$-th of the following $$$n$$$ lines, there are two integers $$$a_i$$$ and $$$b_i$$$ ($$$1 \\le a_i, b_i \\le n$$$) — the topic and the difficulty of the $$$i$$$-th problem.\nIt is guaranteed that there are no two problems that have the same topic and difficulty at the same time.\nThe sum of $$$n$$$ over all testcases doesn't exceed $$$2 \\cdot 10^5$$$.\nOutput\nPrint the number of ways to select three training problems that meet either of the requirements described in the statement.\nExample\nInput\n2\n4\n2 4\n3 4\n2 1\n1 3\n5\n1 5\n2 4\n3 3\n4 2\n5 1\nOutput\n3\n10\nNote\nIn the first example, you can take the following sets of three problems:\nproblems $$$1$$$, $$$2$$$, $$$4$$$;\nproblems $$$1$$$, $$$3$$$, $$$4$$$;\nproblems $$$2$$$, $$$3$$$, $$$4$$$.\nThus, the number of ways is equal to three.",
+    "samples": [
+      {
+        "input": "2\n4\n2 4\n3 4\n2 1\n1 3\n5\n1 5\n2 4\n3 3\n4 2\n5 1\n",
+        "expected_output": "3\n10\n"
+      }
+    ]
+  },
+  {
+    "url": "https://codeforces.com/problemset/problem/1625/C",
+    "title": "C. Road Optimization",
+    "statement": "C. Road Optimization\ntime limit per test\n3 seconds\nmemory limit per test\n128 megabytes\ninput\nstandard input\noutput\nstandard output\nThe Government of Mars is not only interested in optimizing space flights, but also wants to improve the road system of the planet.\nOne of the most important highways of Mars connects Olymp City and Kstolop, the capital of Cydonia. In this problem, we only consider the way from Kstolop to Olymp City, but not the reverse path (i. e. the path from Olymp City to Kstolop).\nThe road from Kstolop to Olymp City is $$$\\ell$$$ kilometers long. Each point of the road has a coordinate $$$x$$$ ($$$0 \\le x \\le \\ell$$$), which is equal to the distance from Kstolop in kilometers. So, Kstolop is located in the point with coordinate $$$0$$$, and Olymp City is located in the point with coordinate $$$\\ell$$$.\nThere are $$$n$$$ signs along the road, $$$i$$$-th of which sets a speed limit $$$a_i$$$. This limit means that the next kilometer must be passed in $$$a_i$$$ minutes and is active until you encounter the next along the road. There is a road sign at the start of the road (i. e. in the point with coordinate $$$0$$$), which sets the initial speed limit.\nIf you know the location of all the signs, it's not hard to calculate how much time it takes to drive from Kstolop to Olymp City. Consider an example:\nHere, you need to drive the first three kilometers in five minutes each, then one kilometer in eight minutes, then four kilometers in three minutes each, and finally the last two kilometers must be passed in six minutes each. Total time is $$$3\\cdot 5 + 1\\cdot 8 + 4\\cdot 3 + 2\\cdot 6 = 47$$$ minutes.\nTo optimize the road traffic, the Government of Mars decided to remove no more than $$$k$$$ road signs. It cannot remove the sign at the start of the road, otherwise, there will be no limit at the start. By removing these signs, the Government also wants to make the time needed to drive from Kstolop to Olymp City as small as possible.\nThe largest industrial enterprises are located in Cydonia, so it's the priority task to optimize the road traffic from Olymp City. So, the Government of Mars wants you to remove the signs in the way described above.\nInput\nThe first line contains three integers $$$n$$$, $$$\\ell$$$, $$$k$$$ ($$$1 \\le n \\le 500$$$, $$$1 \\le \\ell \\le 10^5$$$, $$$0 \\le k \\le n-1$$$), the amount of signs on the road, the distance between the cities and the maximal number of signs you may remove.\nThe second line contains $$$n$$$ integers $$$d_i$$$ ($$$d_1 = 0$$$, $$$d_i  \\lt  d_{i+1}$$$, $$$0 \\le d_i \\le \\ell - 1$$$) — coordinates of all signs.\nThe third line contains $$$n$$$ integers $$$a_i$$$ ($$$1 \\le a_i \\le 10^4$$$) — speed limits.\nOutput\nPrint a single integer — minimal possible time to drive from Kstolop to Olymp City in minutes, if you remove no more than $$$k$$$ road signs.\nExamples\nInput\n4 10 0\n0 3 4 8\n5 8 3 6\nOutput\n47\nInput\n4 10 2\n0 3 4 8\n5 8 3 6\nOutput\n38\nNote\nIn the first example, you cannot remove the signs. So the answer is $$$47$$$, as it's said in the statements above.\nIn the second example, you may remove the second and the fourth sign. In this case, you need to drive four kilometers in $$$4\\cdot5 = 20$$$ minutes, and then six kilometers in $$$6\\cdot3 = 18$$$, so the total time is $$$4\\cdot5 + 6\\cdot3 = 38$$$ minutes.",
+    "samples": [
+      {
+        "input": "4 10 0\n0 3 4 8\n5 8 3 6\n",
+        "expected_output": "47\n"
+      },
+      {
+        "input": "4 10 2\n0 3 4 8\n5 8 3 6\n",
+        "expected_output": "38\n"
+      }
+    ]
+  },
+  {
+    "url": "https://codeforces.com/problemset/problem/1792/D",
+    "title": "D. Fixed Prefix Permutations",
+    "statement": "D. Fixed Prefix Permutations\ntime limit per test\n2 seconds\nmemory limit per test\n256 megabytes\ninput\nstandard input\noutput\nstandard output\nYou are given $$$n$$$ permutations $$$a_1, a_2, \\dots, a_n$$$, each of length $$$m$$$. Recall that a permutation of length $$$m$$$ is a sequence of $$$m$$$\ndistinct\nintegers from $$$1$$$ to $$$m$$$.\nLet the beauty of a permutation $$$p_1, p_2, \\dots, p_m$$$ be the largest $$$k$$$ such that $$$p_1 = 1, p_2 = 2, \\dots, p_k = k$$$. If $$$p_1 \\neq 1$$$, then the beauty is $$$0$$$.\nThe product of two permutations $$$p \\cdot q$$$ is a permutation $$$r$$$ such that $$$r_j = q_{p_j}$$$.\nFor each $$$i$$$ from $$$1$$$ to $$$n$$$, print the largest beauty of a permutation $$$a_i \\cdot a_j$$$ over all $$$j$$$ from $$$1$$$ to $$$n$$$ (possibly, $$$i = j$$$).\nInput\nThe first line contains a single integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of testcases.\nThe first line of each testcase contains two integers $$$n$$$ and $$$m$$$ ($$$1 \\le n \\le 5 \\cdot 10^4$$$; $$$1 \\le m \\le 10$$$) — the number of permutations and the length of each permutation.\nThe $$$i$$$-th of the next $$$n$$$ lines contains a permutation $$$a_i$$$ — $$$m$$$ distinct integers from $$$1$$$ to $$$m$$$.\nThe sum of $$$n$$$ doesn't exceed $$$5 \\cdot 10^4$$$ over all testcases.\nOutput\nFor each testcase, print $$$n$$$ integers. The $$$i$$$-th value should be equal to the largest beauty of a permutation $$$a_i \\cdot a_j$$$ over all $$$j$$$ ($$$1 \\le j \\le n$$$).\nExample\nInput\n3\n3 4\n2 4 1 3\n1 2 4 3\n2 1 3 4\n2 2\n1 2\n2 1\n8 10\n3 4 9 6 10 2 7 8 1 5\n3 9 1 8 5 7 4 10 2 6\n3 10 1 7 5 9 6 4 2 8\n1 2 3 4 8 6 10 7 9 5\n1 2 3 4 10 6 8 5 7 9\n9 6 1 2 10 4 7 8 3 5\n7 9 3 2 5 6 4 8 1 10\n9 4 3 7 5 6 1 10 8 2\nOutput\n1 4 4 \n2 2 \n10 8 1 6 8 10 1 7",
+    "samples": [
+      {
+        "input": "3\n3 4\n2 4 1 3\n1 2 4 3\n2 1 3 4\n2 2\n1 2\n2 1\n8 10\n3 4 9 6 10 2 7 8 1 5\n3 9 1 8 5 7 4 10 2 6\n3 10 1 7 5 9 6 4 2 8\n1 2 3 4 8 6 10 7 9 5\n1 2 3 4 10 6 8 5 7 9\n9 6 1 2 10 4 7 8 3 5\n7 9 3 2 5 6 4 8 1 10\n9 4 3 7 5 6 1 10 8 2\n",
+        "expected_output": "1 4 4 \n2 2 \n10 8 1 6 8 10 1 7\n"
+      }
+    ]
+  },
+  {
+    "url": "https://codeforces.com/problemset/problem/1893/B",
+    "title": "B. Neutral Tonality",
+    "statement": "B. Neutral Tonality\ntime limit per test\n3 seconds\nmemory limit per test\n512 megabytes\ninput\nstandard input\noutput\nstandard output\nYou are given an array $$$a$$$ consisting of $$$n$$$ integers, as well as an array $$$b$$$ consisting of $$$m$$$ integers.\nLet $$$\\text{LIS}(c)$$$ denote the length of the\nlongest increasing subsequence\nof array $$$c$$$. For example, $$$\\text{LIS}([2, \\underline{1}, 1, \\underline{3}])$$$ = $$$2$$$, $$$\\text{LIS}([\\underline{1}, \\underline{7}, \\underline{9}])$$$ = $$$3$$$, $$$\\text{LIS}([3, \\underline{1}, \\underline{2}, \\underline{4}])$$$ = $$$3$$$.\nYou need to insert the numbers $$$b_1, b_2, \\ldots, b_m$$$ into the array $$$a$$$, at any positions, in any order. Let the resulting array be $$$c_1, c_2, \\ldots, c_{n+m}$$$. You need to choose the positions for insertion in order to\nminimize\n$$$\\text{LIS}(c)$$$.\nFormally, you need to find an array $$$c_1, c_2, \\ldots, c_{n+m}$$$ that simultaneously satisfies the following conditions:\nThe array $$$a_1, a_2, \\ldots, a_n$$$ is a subsequence of the array $$$c_1, c_2, \\ldots, c_{n+m}$$$.\nThe array $$$c_1, c_2, \\ldots, c_{n+m}$$$ consists of the numbers $$$a_1, a_2, \\ldots, a_n, b_1, b_2, \\ldots, b_m$$$, possibly rearranged.\nThe value of $$$\\text{LIS}(c)$$$ is the\nminimum\npossible among all suitable arrays $$$c$$$.\nInput\nEach test contains multiple test cases. The first line contains a single integer $$$t$$$ $$$(1 \\leq t \\leq 10^4)$$$ — the number of test cases. The description of the test cases follows.\nThe first line of each test case contains two integers $$$n, m$$$ $$$(1 \\leq n \\leq 2 \\cdot 10^5, 1 \\leq m \\leq 2 \\cdot 10^5)$$$ — the length of array $$$a$$$ and the length of array $$$b$$$.\nThe second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ $$$(1 \\leq a_i \\leq 10^9)$$$ — the elements of the array $$$a$$$.\nThe third line of each test case contains $$$m$$$ integers $$$b_1, b_2, \\ldots, b_m$$$ $$$(1 \\leq b_i \\leq 10^9)$$$ — the elements of the array $$$b$$$.\nIt is guaranteed that the sum of $$$n$$$ over all test cases does not exceed $$$2\\cdot 10^5$$$, and the sum of $$$m$$$ over all test cases does not exceed $$$2\\cdot 10^5$$$.\nOutput\nFor each test case, output $$$n + m$$$ numbers — the elements of the final array $$$c_1, c_2, \\ldots, c_{n+m}$$$, obtained after the insertion, such that the value of $$$\\text{LIS}(c)$$$ is minimized. If there are several answers, you can output any of them.\nExample\nInput\n7\n2 1\n6 4\n5\n5 5\n1 7 2 4 5\n5 4 1 2 7\n1 9\n7\n1 2 3 4 5 6 7 8 9\n3 2\n1 3 5\n2 4\n10 5\n1 9 2 3 8 1 4 7 2 9\n7 8 5 4 6\n2 1\n2 2\n1\n6 1\n1 1 1 1 1 1\n777\nOutput\n6 5 4\n1 1 7 7 2 2 4 4 5 5\n9 8 7 7 6 5 4 3 2 1\n1 3 5 2 4\n1 9 2 3 8 8 1 4 4 7 7 2 9 6 5\n2 2 1\n777 1 1 1 1 1 1\nNote\nIn the first test case, $$$\\text{LIS}(a) = \\text{LIS}([6, 4]) = 1$$$. We can insert the number $$$5$$$ between $$$6$$$ and $$$4$$$, then $$$\\text{LIS}(c) = \\text{LIS}([6, 5, 4]) = 1$$$.\nIn the second test case, $$$\\text{LIS}([\\underline{1}, 7, \\underline{2}, \\underline{4}, \\underline{5}])$$$ = $$$4$$$. After the insertion, $$$c = [1, 1, 7, 7, 2, 2, 4, 4, 5, 5]$$$. It is easy to see that $$$\\text{LIS}(c) = 4$$$. It can be shown that it is impossible to achieve $$$\\text{LIS}(c)$$$ less than $$$4$$$.",
+    "samples": [
+      {
+        "input": "7\n2 1\n6 4\n5\n5 5\n1 7 2 4 5\n5 4 1 2 7\n1 9\n7\n1 2 3 4 5 6 7 8 9\n3 2\n1 3 5\n2 4\n10 5\n1 9 2 3 8 1 4 7 2 9\n7 8 5 4 6\n2 1\n2 2\n1\n6 1\n1 1 1 1 1 1\n777\n",
+        "expected_output": "6 5 4\n1 1 7 7 2 2 4 4 5 5\n9 8 7 7 6 5 4 3 2 1\n1 3 5 2 4\n1 9 2 3 8 8 1 4 4 7 7 2 9 6 5\n2 2 1\n777 1 1 1 1 1 1\n"
+      }
+    ]
+  },
+  {
+    "url": "https://codeforces.com/problemset/problem/1290/B",
+    "title": "B. Irreducible Anagrams",
+    "statement": "B. Irreducible Anagrams\ntime limit per test\n2 seconds\nmemory limit per test\n256 megabytes\ninput\nstandard input\noutput\nstandard output\nLet's call two strings $$$s$$$ and $$$t$$$\nanagrams\nof each other if it is possible to rearrange symbols in the string $$$s$$$ to get a string, equal to $$$t$$$.\nLet's consider two strings $$$s$$$ and $$$t$$$\nwhich are anagrams of each other\n. We say that $$$t$$$ is a\nreducible anagram\nof $$$s$$$ if there exists an integer $$$k \\ge 2$$$ and $$$2k$$$ non-empty strings $$$s_1, t_1, s_2, t_2, \\dots, s_k, t_k$$$ that satisfy the following conditions:\nIf we write the strings $$$s_1, s_2, \\dots, s_k$$$ in order, the resulting string will be equal to $$$s$$$;\nIf we write the strings $$$t_1, t_2, \\dots, t_k$$$ in order, the resulting string will be equal to $$$t$$$;\nFor all integers $$$i$$$ between $$$1$$$ and $$$k$$$ inclusive, $$$s_i$$$ and $$$t_i$$$ are anagrams of each other.\nIf such strings don't exist, then $$$t$$$ is said to be an\nirreducible anagram\nof $$$s$$$.\nNote that these notions are only defined when $$$s$$$ and $$$t$$$ are anagrams of each other\n.\nFor example, consider the string $$$s = $$$ \"\ngamegame\n\". Then the string $$$t = $$$ \"\nmegamage\n\" is a reducible anagram of $$$s$$$, we may choose for example $$$s_1 = $$$ \"\ngame\n\", $$$s_2 = $$$ \"\ngam\n\", $$$s_3 = $$$ \"\ne\n\" and $$$t_1 = $$$ \"\nmega\n\", $$$t_2 = $$$ \"\nmag\n\", $$$t_3 = $$$ \"\ne\n\":\nOn the other hand, we can prove that $$$t = $$$ \"\nmemegaga\n\" is an irreducible anagram of $$$s$$$.\nYou will be given a string $$$s$$$ and $$$q$$$ queries, represented by two integers $$$1 \\le l \\le r \\le |s|$$$ (where $$$|s|$$$ is equal to the length of the string $$$s$$$). For each query, you should find if the substring of $$$s$$$ formed by characters from the $$$l$$$-th to the $$$r$$$-th has\nat least one\nirreducible anagram.\nInput\nThe first line contains a string $$$s$$$, consisting of lowercase English characters ($$$1 \\le |s| \\le 2 \\cdot 10^5$$$).\nThe second line contains a single integer $$$q$$$ ($$$1 \\le q \\le 10^5$$$)  — the number of queries.\nEach of the following $$$q$$$ lines contain two integers $$$l$$$ and $$$r$$$ ($$$1 \\le l \\le r \\le |s|$$$), representing a query for the substring of $$$s$$$ formed by characters from the $$$l$$$-th to the $$$r$$$-th.\nOutput\nFor each query, print a single line containing \"\nYes\n\" (without quotes) if the corresponding substring has at least one irreducible anagram, and a single line containing \"\nNo\n\" (without quotes) otherwise.\nExamples\nInput\naaaaa\n3\n1 1\n2 4\n5 5\nOutput\nYes\nNo\nYes\nInput\naabbbbbbc\n6\n1 2\n2 4\n2 2\n1 9\n5 7\n3 5\nOutput\nNo\nYes\nYes\nYes\nNo\nNo\nNote\nIn the first sample, in the first and third queries, the substring is \"\na\n\", which has itself as an irreducible anagram since two or more non-empty strings cannot be put together to obtain \"\na\n\". On the other hand, in the second query, the substring is \"\naaa\n\", which has no irreducible anagrams: its only anagram is itself, and we may choose $$$s_1 = $$$ \"\na\n\", $$$s_2 = $$$ \"\naa\n\", $$$t_1 = $$$ \"\na\n\", $$$t_2 = $$$ \"\naa\n\" to show that it is a reducible anagram.\nIn the second query of the second sample, the substring is \"\nabb\n\", which has, for example, \"\nbba\n\" as an irreducible anagram.",
+    "samples": [
+      {
+        "input": "aaaaa\n3\n1 1\n2 4\n5 5\n",
+        "expected_output": "Yes\nNo\nYes\n"
+      },
+      {
+        "input": "aabbbbbbc\n6\n1 2\n2 4\n2 2\n1 9\n5 7\n3 5\n",
+        "expected_output": "No\nYes\nYes\nYes\nNo\nNo\n"
+      }
+    ]
+  },
+  {
+    "url": "https://codeforces.com/problemset/problem/1338/B",
+    "title": "B. Edge Weight Assignment",
+    "statement": "B. Edge Weight Assignment\ntime limit per test\n1 second\nmemory limit per test\n256 megabytes\ninput\nstandard input\noutput\nstandard output\nYou have unweighted tree of $$$n$$$ vertices. You have to assign a\npositive\nweight to each edge so that the following condition would hold:\nFor every two different leaves $$$v_{1}$$$ and $$$v_{2}$$$ of this tree,\nbitwise XOR\nof weights of all edges on the simple path between $$$v_{1}$$$ and $$$v_{2}$$$ has to be equal to $$$0$$$.\nNote that you can put\nvery large\npositive integers (like $$$10^{(10^{10})}$$$).\nIt's guaranteed that such assignment always exists under given constraints. Now let's define $$$f$$$ as\nthe number of distinct weights\nin assignment.\nIn this example, assignment is valid, because bitwise XOR of all edge weights between every pair of leaves is $$$0$$$. $$$f$$$ value is $$$2$$$ here, because there are $$$2$$$ distinct edge weights($$$4$$$ and $$$5$$$).\nIn this example, assignment is invalid, because bitwise XOR of all edge weights between vertex $$$1$$$ and vertex $$$6$$$ ($$$3, 4, 5, 4$$$) is not $$$0$$$.\nWhat are the minimum and the maximum possible values of $$$f$$$ for the given tree? Find and print both.\nInput\nThe first line contains integer $$$n$$$ ($$$3 \\le n \\le 10^{5}$$$) — the number of vertices in given tree.\nThe $$$i$$$-th of the next $$$n-1$$$ lines contains two integers $$$a_{i}$$$ and $$$b_{i}$$$ ($$$1 \\le a_{i} \\lt b_{i} \\le n$$$) — it means there is an edge between $$$a_{i}$$$ and $$$b_{i}$$$. It is guaranteed that given graph forms tree of $$$n$$$ vertices.\nOutput\nPrint two integers — the minimum and maximum possible value of $$$f$$$ can be made from valid assignment of given tree. Note that it's always possible to make an assignment under given constraints.\nExamples\nInput\n6\n1 3\n2 3\n3 4\n4 5\n5 6\nOutput\n1 4\nInput\n6\n1 3\n2 3\n3 4\n4 5\n4 6\nOutput\n3 3\nInput\n7\n1 2\n2 7\n3 4\n4 7\n5 6\n6 7\nOutput\n1 6\nNote\nIn the first example, possible assignments for each minimum and maximum are described in picture below. Of course, there are multiple possible assignments for each minimum and maximum.\nIn the second example, possible assignments for each minimum and maximum are described in picture below. The $$$f$$$ value of valid assignment of this tree is always $$$3$$$.\nIn the third example, possible assignments for each minimum and maximum are described in picture below. Of course, there are multiple possible assignments for each minimum and maximum.",
+    "samples": [
+      {
+        "input": "6\n1 3\n2 3\n3 4\n4 5\n5 6\n",
+        "expected_output": "1 4\n"
+      },
+      {
+        "input": "6\n1 3\n2 3\n3 4\n4 5\n4 6\n",
+        "expected_output": "3 3\n"
+      },
+      {
+        "input": "7\n1 2\n2 7\n3 4\n4 7\n5 6\n6 7\n",
+        "expected_output": "1 6\n"
+      }
+    ]
+  },
+  {
+    "url": "https://codeforces.com/problemset/problem/1509/C",
+    "title": "C. The Sports Festival",
+    "statement": "C. The Sports Festival\ntime limit per test\n1 second\nmemory limit per test\n256 megabytes\ninput\nstandard input\noutput\nstandard output\nThe student council is preparing for the relay race at the sports festival.\nThe council consists of $$$n$$$ members. They will run one after the other in the race, the speed of member $$$i$$$ is $$$s_i$$$. The\ndiscrepancy\n$$$d_i$$$ of the $$$i$$$-th stage is the difference between the maximum and the minimum running speed among the first $$$i$$$ members who ran. Formally, if $$$a_i$$$ denotes the speed of the $$$i$$$-th member who participated in the race, then $$$d_i = \\max(a_1, a_2, \\dots, a_i) - \\min(a_1, a_2, \\dots, a_i)$$$.\nYou want to minimize the sum of the discrepancies $$$d_1 + d_2 + \\dots + d_n$$$. To do this, you are allowed to change the order in which the members run. What is the minimum possible sum that can be achieved?\nInput\nThe first line contains a single integer $$$n$$$ ($$$1 \\le n \\le 2000$$$)  — the number of members of the student council.\nThe second line contains $$$n$$$ integers $$$s_1, s_2, \\dots, s_n$$$ ($$$1 \\le s_i \\le 10^9$$$)  – the running speeds of the members.\nOutput\nPrint a single integer  — the minimum possible value of $$$d_1 + d_2 + \\dots + d_n$$$ after choosing the order of the members.\nExamples\nInput\n3\n3 1 2\nOutput\n3\nInput\n1\n5\nOutput\n0\nInput\n6\n1 6 3 3 6 3\nOutput\n11\nInput\n6\n104 943872923 6589 889921234 1000000000 69\nOutput\n2833800505\nNote\nIn the first test case, we may choose to make the third member run first, followed by the first member, and finally the second. Thus $$$a_1 = 2$$$, $$$a_2 = 3$$$, and $$$a_3 = 1$$$. We have:\n$$$d_1 = \\max(2) - \\min(2) = 2 - 2 = 0$$$.\n$$$d_2 = \\max(2, 3) - \\min(2, 3) = 3 - 2 = 1$$$.\n$$$d_3 = \\max(2, 3, 1) - \\min(2, 3, 1) = 3 - 1 = 2$$$.\nThe resulting sum is $$$d_1 + d_2 + d_3 = 0 + 1 + 2 = 3$$$. It can be shown that it is impossible to achieve a smaller value.\nIn the second test case, the only possible rearrangement gives $$$d_1 = 0$$$, so the minimum possible result is $$$0$$$.",
+    "samples": [
+      {
+        "input": "3\n3 1 2\n",
+        "expected_output": "3\n"
+      },
+      {
+        "input": "1\n5\n",
+        "expected_output": "0\n"
+      },
+      {
+        "input": "6\n1 6 3 3 6 3\n",
+        "expected_output": "11\n"
+      },
+      {
+        "input": "6\n104 943872923 6589 889921234 1000000000 69\n",
+        "expected_output": "2833800505\n"
+      }
+    ]
+  },
+  {
+    "url": "https://codeforces.com/problemset/problem/2044/F",
+    "title": "F. Easy Demon Problem",
+    "statement": "F. Easy Demon Problem\ntime limit per test\n4 seconds\nmemory limit per test\n256 megabytes\ninput\nstandard input\noutput\nstandard output\nFor an arbitrary grid, Robot defines its\nbeauty\nto be the sum of elements in the grid.\nRobot gives you an array $$$a$$$ of length $$$n$$$ and an array $$$b$$$ of length $$$m$$$. You construct a $$$n$$$ by $$$m$$$ grid $$$M$$$ such that $$$M_{i,j}=a_i\\cdot b_j$$$ for all $$$1 \\leq i \\leq n$$$ and $$$1 \\leq j \\leq m$$$.\nThen, Robot gives you $$$q$$$ queries, each consisting of a single integer $$$x$$$. For each query, determine whether or not it is possible to perform the following operation\nexactly\nonce so that $$$M$$$ has a\nbeauty\nof $$$x$$$:\nChoose integers $$$r$$$ and $$$c$$$ such that $$$1 \\leq r \\leq n$$$ and $$$1 \\leq c \\leq m$$$\nSet $$$M_{i,j}$$$ to be $$$0$$$ for all ordered pairs $$$(i,j)$$$ such that $$$i=r$$$, $$$j=c$$$, or both.\nNote that queries are\nnot persistent\n, meaning that you do not actually set any elements to $$$0$$$ in the process — you are only required to output if it is possible to find $$$r$$$ and $$$c$$$ such that if the above operation is performed, the\nbeauty\nof the grid will be $$$x$$$. Also, note that you must perform the operation for each query, even if the beauty of the original grid is already $$$x$$$.\nInput\nThe first line contains three integers $$$n$$$, $$$m$$$, and $$$q$$$ ($$$1 \\leq n,m \\leq 2\\cdot 10^5, 1 \\leq q \\leq 5\\cdot 10^4$$$) — the length of $$$a$$$, the length of $$$b$$$, and the number of queries respectively.\nThe second line contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$0 \\leq |a_i| \\leq n$$$).\nThe third line contains $$$m$$$ integers $$$b_1, b_2, \\ldots, b_m$$$ ($$$0 \\leq |b_i| \\leq m$$$).\nThe following $$$q$$$ lines each contain a single integer $$$x$$$ ($$$1 \\leq |x| \\leq 2\\cdot 10^5$$$), the beauty of the grid you wish to achieve by setting all elements in a row and a column to $$$0$$$.\nOutput\nFor each testcase, output \"\nYES\n\" (without quotes) if there is a way to perform the aforementioned operation such that the beauty is $$$x$$$, and \"\nNO\n\" (without quotes) otherwise.\nYou can output \"\nYES\n\" and \"\nNO\n\" in any case (for example, strings \"\nyES\n\", \"\nyes\n\" and \"\nYes\n\" will be recognized as a positive response).\nExamples\nInput\n3 3 6\n-2 3 -3\n-2 2 -1\n-1\n1\n-2\n2\n-3\n3\nOutput\nNO\nYES\nNO\nNO\nYES\nNO\nInput\n5 5 6\n1 -2 3 0 0\n0 -2 5 0 -3\n4\n-3\n5\n2\n-1\n2\nOutput\nYES\nYES\nYES\nYES\nNO\nYES\nNote\nIn the second example, the grid is\n0 -2 5 0 -3\n0 4 -10 0 6\n0 -6 15 0 -9\n0 0 0 0 0\n0 0 0 0 0\nBy performing the operation with $$$r=4$$$ and $$$c=2$$$, we create the following grid:\n0 0 5 0 -3\n0 0 -10 0 6\n0 0 15 0 -9\n0 0 0 0 0\n0 0 0 0 0\nwhich has\nbeauty\n$$$4$$$. Thus, we output\nYES\n.\nIn the second query, selecting $$$r=3$$$ and $$$c=5$$$ creates a grid with\nbeauty\n$$$-3$$$.\nIn the third query, selecting $$$r=3$$$ and $$$c=3$$$ creates a grid with\nbeauty\n$$$5$$$.",
+    "samples": [
+      {
+        "input": "3 3 6\n-2 3 -3\n-2 2 -1\n-1\n1\n-2\n2\n-3\n3\n",
+        "expected_output": "NO\nYES\nNO\nNO\nYES\nNO\n"
+      },
+      {
+        "input": "5 5 6\n1 -2 3 0 0\n0 -2 5 0 -3\n4\n-3\n5\n2\n-1\n2\n",
+        "expected_output": "YES\nYES\nYES\nYES\nNO\nYES\n"
+      }
+    ]
+  },
+  {
+    "url": "https://codeforces.com/problemset/problem/2014/H",
+    "title": "H. Robin Hood Archery",
+    "statement": "H. Robin Hood Archery\ntime limit per test\n3 seconds\nmemory limit per test\n256 megabytes\ninput\nstandard input\noutput\nstandard output\nAt such times archery was always the main sport of the day, for the Nottinghamshire yeomen were the best hand at the longbow in all merry England, but this year the Sheriff hesitated...\nSheriff of Nottingham has organized a tournament in archery. It's the final round and Robin Hood is playing against Sheriff!\nThere are $$$n$$$ targets in a row numbered from $$$1$$$ to $$$n$$$. When a player shoots target $$$i$$$, their score increases by $$$a_i$$$ and the target $$$i$$$ is destroyed. The game consists of turns and players alternate between whose turn it is. Robin Hood always starts the game, then Sheriff and so on. The game continues until all targets are destroyed. Both players start with score $$$0$$$.\nAt the end of the game, the player with most score wins and the other player loses. If both players have the same score, it's a tie and no one wins or loses. In each turn, the player can shoot any target that wasn't shot before. Both play optimally to get the most score possible.\nSheriff of Nottingham has a suspicion that he might lose the game! This cannot happen, you must help Sheriff. Sheriff will pose $$$q$$$ queries, each specifying $$$l$$$ and $$$r$$$. This means that the game would be played only with targets $$$l, l+1, \\dots, r$$$, as others would be removed by Sheriff before the game starts.\nFor each query $$$l$$$, $$$r$$$, determine whether the Sheriff can\nnot lose\nthe game when only considering the targets $$$l, l+1, \\dots, r$$$.\nInput\nThe first line of input contains one integer $$$t$$$ ($$$1 \\le t \\le 10^4$$$) — the number of test cases.\nThe first line of each test case contains two integers $$$n$$$, $$$q$$$ ($$$1 \\le n,q \\le 2\\cdot10^5$$$) — the number of targets and the queries Sheriff will pose.\nThe second line of each test case contains $$$n$$$ integers $$$a_1, a_2, \\ldots, a_n$$$ ($$$1 \\le a_i \\le 10^6$$$) — the points for hitting each target.\nThen follow $$$q$$$ lines, each with two integers $$$l$$$ and $$$r$$$ ($$$1 \\le l \\le r \\le n$$$) — the range of the targets that is considered for each query.\nIt is guaranteed that the sum of both $$$n$$$ and $$$q$$$ across all test cases does not exceed $$$2 \\cdot 10^5$$$.\nOutput\nFor each query, output \"\nYES\n\", if the Sheriff\ndoes not lose the game\nwhen only considering the targets $$$l, l+1, \\dots, r$$$, and \"\nNO\n\" otherwise.\nYou can output the answer in any case (upper or lower). For example, the strings \"\nyEs\n\", \"\nyes\n\", \"\nYes\n\", and \"\nYES\n\" will be recognized as positive responses.\nExample\nInput\n2\n3 3\n1 2 2\n1 2\n1 3\n2 3\n5 3\n2 1 2 1 1\n1 2\n1 3\n4 5\nOutput\nNO\nNO\nYES\nNO\nNO\nYES",
+    "samples": [
+      {
+        "input": "2\n3 3\n1 2 2\n1 2\n1 3\n2 3\n5 3\n2 1 2 1 1\n1 2\n1 3\n4 5\n",
+        "expected_output": "NO\nNO\nYES\nNO\nNO\nYES\n"
+      }
+    ]
+  },
+  {
+    "url": "https://codeforces.com/problemset/problem/1925/D",
+    "title": "D. Good Trip",
+    "statement": "D. Good Trip\ntime limit per test\n1 second\nmemory limit per test\n256 megabytes\ninput\nstandard input\noutput\nstandard output\nThere are $$$n$$$ children in a class, $$$m$$$ pairs among them are friends. The $$$i$$$-th pair who are friends have a friendship value of $$$f_i$$$.\nThe teacher has to go for $$$k$$$ excursions, and for each of the excursions she chooses a pair of children randomly, equiprobably and independently. If a pair of children who are friends is chosen, their friendship value increases by $$$1$$$ for all subsequent excursions (the teacher can choose a pair of children more than once). The friendship value of a pair who are not friends is considered $$$0$$$, and it does not change for subsequent excursions.\nFind the expected value of the sum of friendship values of all $$$k$$$ pairs chosen for the excursions (at the time of being chosen). It can be shown that this answer can always be expressed as a fraction $$$\\dfrac{p}{q}$$$ where $$$p$$$ and $$$q$$$ are coprime integers. Calculate $$$p\\cdot q^{-1} \\bmod (10^9+7)$$$.\nInput\nEach test contains multiple test cases. The first line contains the number of test cases $$$t$$$ ($$$1 \\le t \\le 5 \\cdot 10^4$$$). Description of the test cases follows.\nThe first line of each test case contains $$$3$$$ integers $$$n$$$, $$$m$$$ and $$$k$$$ ($$$2 \\le n \\le 10^5$$$, $$$0 \\le m \\le \\min \\Big(10^5$$$, $$$ \\frac{n(n-1)}{2} \\Big)$$$, $$$1 \\le k \\le 2 \\cdot 10^5$$$) — the number of children, pairs of friends and excursions respectively.\nThe next $$$m$$$ lines contain three integers each — $$$a_i$$$, $$$b_i$$$, $$$f_i$$$ — the indices of the pair of children who are friends and their friendship value. ($$$a_i \\neq b_i$$$, $$$1 \\le a_i,b_i \\le n$$$, $$$1 \\le f_i \\le 10^9$$$).\nIt is guaranteed that all pairs of friends are distinct\n.\nIt is guaranteed that the sum of $$$n$$$ and sum $$$m$$$ over all test cases does not exceed $$$10^5$$$ and the sum of $$$k$$$ over all test cases does not exceed $$$2 \\cdot 10^5$$$.\nOutput\nFor each test case, print one integer — the answer to the problem.\nExample\nInput\n4\n100 0 24\n2 1 10\n1 2 1\n3 1 2\n2 1 1\n5 2 4\n1 2 25\n3 2 24\nOutput\n0\n55\n777777784\n40000020\nNote\nFor the first test case, there are no pairs of friends, so the friendship value of all pairs is $$$0$$$ and stays $$$0$$$ for subsequent rounds, hence the friendship value for all excursions is $$$0$$$.\nFor the second test case, there is only one pair possible $$$(1, 2)$$$ and its friendship value is initially $$$1$$$, so each turn they are picked and their friendship value increases by $$$1$$$. Therefore, the total sum is $$$1+2+3+\\ldots+10 = 55$$$.\nFor the third test case, the final answer is $$$\\frac{7}{9} = 777\\,777\\,784\\bmod (10^9+7)$$$.",
+    "samples": [
+      {
+        "input": "4\n100 0 24\n2 1 10\n1 2 1\n3 1 2\n2 1 1\n5 2 4\n1 2 25\n3 2 24\n",
+        "expected_output": "0\n55\n777777784\n40000020\n"
+      }
+    ]
+  }
+]
