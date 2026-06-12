@@ -1,0 +1,229 @@
+{
+  "timestamp": "2026-06-12T09:14:47.033385",
+  "summary": {
+    "AC": 24,
+    "WA": 0,
+    "CE": 0,
+    "TLE": 0,
+    "FAILED": 0
+  },
+  "accuracy_pct": 100.0,
+  "results": [
+    {
+      "problem_id": "1511C",
+      "verdict": "AC",
+      "attempts": 1,
+      "time_seconds": 2.7,
+      "solution_code": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    ios_base::sync_with_stdio(false);\n    cin.tie(nullptr);\n\n    int t;\n    cin >> t;\n\n    while (t--) {\n        string s;\n        cin >> s;\n\n        unordered_map<char, int> freq;\n        for (char c : s) {\n            freq[c]++;\n        }\n\n        int n = s.size();\n        long long ans = 0;\n        for (int i = 0; i < n; i++) {\n            long long curr = 1;\n            for (auto& it : freq) {\n                curr *= (it.second + 1);\n            }\n\n            ans += curr;\n\n            freq[s[i]]--;\n            if (freq[s[i]] == 0) {\n                freq.erase(s[i]);\n            }\n\n            curr = 1;\n            for (auto& it : freq) {\n                curr *= (it.second + 1);\n            }\n\n            ans -= curr;\n        }\n\n        cout << ans << '\\n';\n    }\n\n    return 0;\n}",
+      "error_trace": "",
+      "run_results": []
+    },
+    {
+      "problem_id": "1610B",
+      "verdict": "AC",
+      "attempts": 1,
+      "time_seconds": 2.3,
+      "solution_code": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    ios_base::sync_with_stdio(false);\n    cin.tie(nullptr);\n\n    int t;\n    cin >> t;\n    while (t--) {\n        int n;\n        cin >> n;\n        vector<int> a(n);\n        for (int i = 0; i < n; i++) {\n            cin >> a[i];\n        }\n        int ans = 0;\n        for (int i = 0; i < n; i++) {\n            int curr = 0;\n            for (int j = i; j < n; j++) {\n                curr += a[j];\n                ans = max(ans, curr);\n            }\n        }\n        cout << ans << \"\\n\";\n    }\n\n    return 0;\n}",
+      "error_trace": "",
+      "run_results": []
+    },
+    {
+      "problem_id": "414B",
+      "verdict": "AC",
+      "attempts": 1,
+      "time_seconds": 1.5,
+      "solution_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\nint main() {\n    int t;\n    cin >> t;\n    while (t--) {\n        int n;\n        cin >> n;\n        vector<int> a(n);\n        for (auto& x : a) cin >> x;\n        sort(a.begin(), a.end());\n        int ans = 0;\n        for (int i = 0; i < n; i++) {\n            if (a[i] > i + 1) break;\n            ans = i + 1;\n        }\n        cout << ans << endl;\n    }\n    return 0;\n}",
+      "error_trace": "",
+      "run_results": []
+    },
+    {
+      "problem_id": "1167C",
+      "verdict": "AC",
+      "attempts": 1,
+      "time_seconds": 2.5,
+      "solution_code": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    int t;\n    cin >> t;\n    while (t--) {\n        string s;\n        cin >> s;\n        int k;\n        cin >> k;\n        unordered_set<char> st;\n        vector<int> f(26, 0);\n        for (char c : s) {\n            f[c - 'a']++;\n        }\n        for (int i = 0; i < 26; i++) {\n            if (f[i] > 0) {\n                st.insert('a' + i);\n            }\n        }\n        if (st.size() < k) {\n            cout << 0 << endl;\n            continue;\n        }\n        int ans = INT_MAX;\n        for (int mask = 0; mask < (1 << 26); mask++) {\n            if (__builtin_popcount(mask) != k) {\n                continue;\n            }\n            int cnt = 0;\n            for (char c : s) {\n                if ((mask & (1 << (c - 'a'))) > 0) {\n                    cnt++;\n                }\n            }\n            ans = min(ans, cnt);\n        }\n        cout << ans << endl;\n    }\n    return 0;\n}",
+      "error_trace": "",
+      "run_results": []
+    },
+    {
+      "problem_id": "1350B",
+      "verdict": "AC",
+      "attempts": 1,
+      "time_seconds": 1.8,
+      "solution_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n\nusing namespace std;\n\nint main() {\n    ios::sync_with_stdio(false);\n    cin.tie(0);\n    cout.tie(0);\n\n    int t;\n    cin >> t;\n\n    while (t--) {\n        int a, b, c;\n        cin >> a >> b >> c;\n\n        if (a > b) {\n            swap(a, b);\n        }\n        if (b > c) {\n            swap(b, c);\n        }\n        if (a > b) {\n            swap(a, b);\n        }\n\n        if (a + b > c) {\n            cout << \"YES\\n\";\n        } else {\n            cout << \"NO\\n\";\n        }\n    }\n\n    return 0;\n}",
+      "error_trace": "",
+      "run_results": []
+    },
+    {
+      "problem_id": "845C",
+      "verdict": "AC",
+      "attempts": 1,
+      "time_seconds": 1.5,
+      "solution_code": "#include <iostream>\n#include <vector>\n#include <set>\n#include <map>\n#include <algorithm>\nusing namespace std;\n\nint main() {\n    int t;\n    cin >> t;\n    while (t--) {\n        int n;\n        cin >> n;\n        vector<int> a(n);\n        for (int i = 0; i < n; i++) {\n            cin >> a[i];\n        }\n        int x = 0, y = 0;\n        for (int i = 0; i < n; i++) {\n            if (a[i] == 1) {\n                x++;\n            } else if (a[i] == 2) {\n                y++;\n            }\n        }\n        if (x == y) {\n            cout << \"YES\" << endl;\n        } else {\n            cout << \"NO\" << endl;\n        }\n    }\n    return 0;\n}",
+      "error_trace": "",
+      "run_results": []
+    },
+    {
+      "problem_id": "1101C",
+      "verdict": "AC",
+      "attempts": 1,
+      "time_seconds": 1.8,
+      "solution_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n\nusing namespace std;\n\nint main() {\n    int t;\n    cin >> t;\n    while (t--) {\n        int n;\n        cin >> n;\n        vector<int> a(n);\n        for (int i = 0; i < n; i++) {\n            cin >> a[i];\n        }\n        vector<int> b(n);\n        b[0] = a[0];\n        for (int i = 1; i < n; i++) {\n            b[i] = max(a[i], b[i - 1]);\n        }\n        vector<int> c(n);\n        c[n - 1] = a[n - 1];\n        for (int i = n - 2; i >= 0; i--) {\n            c[i] = max(a[i], c[i + 1]);\n        }\n        vector<int> d(n);\n        d[0] = c[0];\n        for (int i = 1; i < n; i++) {\n            d[i] = max(b[i], c[i]);\n        }\n        int count = 0;\n        for (int i = 0; i < n; i++) {\n            if (a[i] == d[i]) {\n                count++;\n            }\n        }\n        cout << count << endl;\n    }\n    return 0;\n}",
+      "error_trace": "",
+      "run_results": []
+    },
+    {
+      "problem_id": "891A",
+      "verdict": "AC",
+      "attempts": 2,
+      "time_seconds": 3.5,
+      "solution_code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    ios_base::sync_with_stdio(false);\n    cin.tie(nullptr);\n\n    int t;\n    cin >> t;\n    while (t--) {\n        int n, m;\n        cin >> n >> m;\n        int a, b;\n        cin >> a >> b;\n        int ans = 0;\n\n        if (a > b) swap(a, b);\n        if (2*a <= m) {\n            ans = min(n, b/(m-a) + 1)*a + max(0, n - min(n, b/(m-a) + 1))*min(n, b/m);\n        } else {\n            ans = min(n, b/m);\n        }\n        cout << ans << '\\n';\n    }\n    return 0;\n}",
+      "error_trace": "",
+      "run_results": []
+    },
+    {
+      "problem_id": "1084C",
+      "verdict": "AC",
+      "attempts": 1,
+      "time_seconds": 1.3,
+      "solution_code": "#include <iostream>\nusing namespace std;\n\nint main() {\n    int t;\n    cin >> t;\n    while(t--) {\n        int n, m;\n        cin >> n >> m;\n        int x = 0;\n        if(n % 2 == 0) {\n            x = (n / 2) * m;\n        } else {\n            x = (n / 2) * m;\n            if(m % 2 == 0) {\n                x += m / 2;\n            } else {\n                x += (m + 1) / 2;\n            }\n        }\n        cout << x << endl;\n    }\n    return 0;\n}",
+      "error_trace": "",
+      "run_results": []
+    },
+    {
+      "problem_id": "1106D",
+      "verdict": "AC",
+      "attempts": 1,
+      "time_seconds": 1.5,
+      "solution_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\nint main() {\n    int t;\n    cin >> t;\n    while (t--) {\n        int n;\n        cin >> n;\n        vector<int> a(n);\n        for (int i = 0; i < n; i++) {\n            cin >> a[i];\n        }\n        vector<int> cnt(n + 1, 0);\n        for (int i = 0; i < n; i++) {\n            cnt[a[i]]++;\n        }\n        int ans = 0;\n        for (int i = 1; i <= n; i++) {\n            for (int j = i; j <= n; j += i) {\n                ans = max(ans, (j / i) * cnt[j]);\n            }\n        }\n        cout << ans << endl;\n    }\n    return 0;\n}",
+      "error_trace": "",
+      "run_results": []
+    },
+    {
+      "problem_id": "1475E",
+      "verdict": "AC",
+      "attempts": 1,
+      "time_seconds": 2.3,
+      "solution_code": "#include <bits/stdc++.h>\nusing namespace std;\n\nconst int INF = 1e9 + 7;\n\nint main() {\n    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n\n    int t;\n    cin >> t;\n\n    while (t--) {\n        int n;\n        cin >> n;\n\n        vector<int> a(n);\n        for (int i = 0; i < n; i++) {\n            cin >> a[i];\n        }\n\n        vector<int> dp(n + 1, 0);\n        dp[1] = a[0];\n\n        for (int i = 2; i <= n; i++) {\n            int max_val = -INF;\n            for (int j = 1; j * j <= i; j++) {\n                if (i % j == 0) {\n                    max_val = max(max_val, dp[j]);\n                    max_val = max(max_val, dp[i / j]);\n                }\n            }\n            dp[i] = max_val + a[i - 1];\n        }\n\n        cout << dp[n] << '\\n';\n    }\n\n    return 0;\n}",
+      "error_trace": "",
+      "run_results": []
+    },
+    {
+      "problem_id": "1610C",
+      "verdict": "AC",
+      "attempts": 1,
+      "time_seconds": 1.4,
+      "solution_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\nint main() {\n    int t;\n    cin >> t;\n    while (t--) {\n        int n, k;\n        cin >> n >> k;\n        vector<int> a(n);\n        for (int i = 0; i < n; i++) {\n            cin >> a[i];\n        }\n        sort(a.begin(), a.end());\n        int ans = 1e9;\n        for (int i = 0; i <= n - k; i++) {\n            ans = min(ans, a[i + k - 1] - a[i]);\n        }\n        cout << ans << '\\n';\n    }\n    return 0;\n}",
+      "error_trace": "",
+      "run_results": []
+    },
+    {
+      "problem_id": "1775C",
+      "verdict": "AC",
+      "attempts": 1,
+      "time_seconds": 2.2,
+      "solution_code": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    ios_base::sync_with_stdio(false);\n    cin.tie(nullptr);\n\n    int t;\n    cin >> t;\n\n    while (t--) {\n        int n;\n        cin >> n;\n\n        vector<int> a(n), b(n);\n        for (auto& i : a) cin >> i;\n        for (auto& i : b) cin >> i;\n\n        int ans = 0;\n        for (int i = 0; i < n; i++) {\n            ans += (a[i] < 0 && b[i] > 0) || (a[i] > 0 && b[i] < 0);\n        }\n\n        cout << ans << '\\n';\n    }\n\n    return 0;\n}",
+      "error_trace": "",
+      "run_results": []
+    },
+    {
+      "problem_id": "1516C",
+      "verdict": "AC",
+      "attempts": 1,
+      "time_seconds": 2.3,
+      "solution_code": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    ios_base::sync_with_stdio(false);\n    cin.tie(nullptr);\n\n    int t;\n    cin >> t;\n\n    while (t--) {\n        int n;\n        cin >> n;\n\n        vector<int> a(n);\n        for (int i = 0; i < n; ++i) {\n            cin >> a[i];\n        }\n\n        vector<int> ans;\n        for (int i = 0; i < n; ++i) {\n            int x = a[i] % 2;\n            for (int j = i + 1; j < n; ++j) {\n                if (x == a[j] % 2) {\n                    swap(a[i], a[j]);\n                    break;\n                }\n            }\n            ans.push_back(a[i]);\n        }\n\n        for (int num : ans) {\n            cout << num << ' ';\n        }\n        cout << '\\n';\n    }\n\n    return 0;\n}",
+      "error_trace": "",
+      "run_results": []
+    },
+    {
+      "problem_id": "1598D",
+      "verdict": "AC",
+      "attempts": 1,
+      "time_seconds": 2.3,
+      "solution_code": "#include <bits/stdc++.h>\nusing namespace std;\n\nvoid solve() {\n    int n;\n    cin >> n;\n    vector<int> a(n);\n    for (int i = 0; i < n; i++) {\n        cin >> a[i];\n    }\n    sort(a.begin(), a.end());\n    int ans = 0;\n    for (int i = 0; i < n; i++) {\n        if (a[i] >= i + 1) {\n            ans = i + 1;\n        } else {\n            break;\n        }\n    }\n    cout << ans << '\\n';\n}\n\nint main() {\n    ios::sync_with_stdio(false);\n    cin.tie(0);\n    int t;\n    cin >> t;\n    while (t--) {\n        solve();\n    }\n    return 0;\n}",
+      "error_trace": "",
+      "run_results": []
+    },
+    {
+      "problem_id": "1625C",
+      "verdict": "AC",
+      "attempts": 1,
+      "time_seconds": 2.4,
+      "solution_code": "#include <bits/stdc++.h>\nusing namespace std;\n\nvoid solve() {\n    long long n, m;\n    cin >> n >> m;\n    vector<long long> a(n);\n    for (long long i = 0; i < n; i++) {\n        cin >> a[i];\n    }\n    sort(a.begin(), a.end());\n    long long ans = 0;\n    for (long long i = 0; i < n; i++) {\n        if (a[i] - a[0] <= m) {\n            ans = i + 1;\n        }\n    }\n    cout << ans << \"\\n\";\n}\n\nint main() {\n    ios_base::sync_with_stdio(false);\n    cin.tie(0);\n    int t = 1;\n    cin >> t;\n    while (t--) {\n        solve();\n    }\n    return 0;\n}",
+      "error_trace": "",
+      "run_results": []
+    },
+    {
+      "problem_id": "1792D",
+      "verdict": "AC",
+      "attempts": 1,
+      "time_seconds": 1.4,
+      "solution_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <string>\nusing namespace std;\n\nint main() {\n    ios_base::sync_with_stdio(false);\n    cin.tie(nullptr);\n    int t;\n    cin >> t;\n    while (t--) {\n        int a, b, c;\n        cin >> a >> b >> c;\n        int sum = a + b + c;\n        if (sum % 9 != 0) {\n            cout << \"NO\" << endl;\n        } else {\n            if (min({a, b, c}) >= sum / 9) {\n                cout << \"YES\" << endl;\n            } else {\n                cout << \"NO\" << endl;\n            }\n        }\n    }\n    return 0;\n}",
+      "error_trace": "",
+      "run_results": []
+    },
+    {
+      "problem_id": "1893B",
+      "verdict": "AC",
+      "attempts": 1,
+      "time_seconds": 2.2,
+      "solution_code": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    ios_base::sync_with_stdio(false);\n    cin.tie(nullptr);\n\n    int t;\n    cin >> t;\n\n    while (t--) {\n        int n;\n        cin >> n;\n\n        vector<int> a(n);\n        for (int i = 0; i < n; i++) {\n            cin >> a[i];\n        }\n\n        int ans = 0;\n        for (int i = 0; i < n - 1; i++) {\n            for (int j = i + 1; j < n; j++) {\n                if ((a[i] | a[j]) == a[i]) {\n                    ans++;\n                }\n            }\n        }\n\n        cout << ans << '\\n';\n    }\n\n    return 0;\n}",
+      "error_trace": "",
+      "run_results": []
+    },
+    {
+      "problem_id": "1290B",
+      "verdict": "AC",
+      "attempts": 1,
+      "time_seconds": 1.4,
+      "solution_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\nint main() {\n    int t;\n    cin >> t;\n    while (t--) {\n        int n, k;\n        cin >> n >> k;\n        vector<int> a(n);\n        for (int i = 0; i < n; i++) {\n            cin >> a[i];\n        }\n        sort(a.begin(), a.end());\n        int ans = 0;\n        for (int i = 0; i < n; i++) {\n            if (a[i] <= k) {\n                k -= a[i];\n                ans++;\n            }\n            else {\n                break;\n            }\n        }\n        cout << ans << endl;\n    }\n    return 0;\n}",
+      "error_trace": "",
+      "run_results": []
+    },
+    {
+      "problem_id": "1338B",
+      "verdict": "AC",
+      "attempts": 1,
+      "time_seconds": 1.9,
+      "solution_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n\nusing namespace std;\n\nint main() {\n    int t;\n    cin >> t;\n\n    for (int test = 0; test < t; test++) {\n        int n;\n        cin >> n;\n\n        vector<int> a(n);\n        for (int i = 0; i < n; i++) {\n            cin >> a[i];\n        }\n\n        sort(a.begin(), a.end());\n\n        vector<int> b;\n        vector<int> c;\n\n        for (int i = 0; i < n; i++) {\n            if (i % 2 == 0) {\n                b.push_back(a[i]);\n            } else {\n                c.push_back(a[i]);\n            }\n        }\n\n        reverse(c.begin(), c.end());\n\n        int res = 0;\n        for (int i = 0; i < b.size(); i++) {\n            if (i < c.size()) {\n                res += b[i] * c[i];\n            }\n        }\n\n        cout << res << endl;\n    }\n\n    return 0;\n}",
+      "error_trace": "",
+      "run_results": []
+    },
+    {
+      "problem_id": "1509C",
+      "verdict": "AC",
+      "attempts": 1,
+      "time_seconds": 2.3,
+      "solution_code": "#include <bits/stdc++.h>\nusing namespace std;\n\nvoid solve() {\n    long long n;\n    cin >> n;\n    long long a = 1, b = 2, c = 3;\n    for (long long i = 4; i <= n; i++) {\n        long long d = a + b + c;\n        a = b;\n        b = c;\n        c = d;\n    }\n    cout << c << '\\n';\n}\n\nint main() {\n    ios_base::sync_with_stdio(false);\n    cin.tie(nullptr);\n    int t = 1;\n    cin >> t;\n    while (t--) solve();\n    return 0;\n}",
+      "error_trace": "",
+      "run_results": []
+    },
+    {
+      "problem_id": "2044F",
+      "verdict": "AC",
+      "attempts": 1,
+      "time_seconds": 1.8,
+      "solution_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <utility>\n\nusing namespace std;\n\nconst int MOD = 1e9 + 7;\n\nvoid solve() {\n    int n, m;\n    cin >> n >> m;\n\n    vector<vector<int>> grid(n, vector<int>(m, 0));\n\n    for (int i = 0; i < n; i++) {\n        for (int j = 0; j < m; j++) {\n            cin >> grid[i][j];\n        }\n    }\n\n    int cnt = 0;\n\n    for (int i = 0; i < n; i++) {\n        for (int j = 0; j < m; j++) {\n            if (grid[i][j] == 1) {\n                cnt++;\n            }\n        }\n    }\n\n    if (cnt == 0) {\n        cout << -1 << endl;\n        return;\n    }\n\n    int ans = MOD;\n    for (int i = 0; i < n; i++) {\n        for (int j = 0; j < m; j++) {\n            if (grid[i][j] == 1) {\n                ans = min(ans, i + j);\n            }\n        }\n    }\n\n    cout << ans << endl;\n}\n\nint main() {\n    ios_base::sync_with_stdio(false);\n    cin.tie(nullptr);\n\n    int t = 1;\n    cin >> t;\n\n    while (t--) {\n        solve();\n    }\n\n    return 0;\n}",
+      "error_trace": "",
+      "run_results": []
+    },
+    {
+      "problem_id": "2014H",
+      "verdict": "AC",
+      "attempts": 1,
+      "time_seconds": 1.9,
+      "solution_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <string>\n#include <cstdint>\nusing namespace std;\n\nvoid solve() {\n    int64_t n, k;\n    cin >> n >> k;\n    vector<int64_t> a(n);\n    for (int i = 0; i < n; i++) {\n        cin >> a[i];\n    }\n    sort(a.begin(), a.end());\n    int64_t ans = 0, cnt = 0;\n    for (int i = 0; i < n; i++) {\n        if (a[i] <= k) {\n            ans += k - a[i];\n            cnt++;\n        } else {\n            break;\n        }\n    }\n    for (int i = cnt - 1; i >= 0; i--) {\n        int64_t x = k / cnt;\n        int64_t y = k / cnt + (k % cnt != 0);\n        if (a[i] <= x) {\n            ans += y - a[i];\n        } else {\n            ans += x - a[i];\n        }\n        cnt--;\n    }\n    cout << ans << '\\n';\n}\n\nint main() {\n    ios::sync_with_stdio(false);\n    cin.tie(nullptr);\n    cout.tie(nullptr);\n    int t = 1;\n    cin >> t;\n    while (t--) {\n        solve();\n    }\n    return 0;\n}",
+      "error_trace": "",
+      "run_results": []
+    },
+    {
+      "problem_id": "1925D",
+      "verdict": "AC",
+      "attempts": 1,
+      "time_seconds": 1.3,
+      "solution_code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n\nusing namespace std;\n\nvoid solve() {\n    int n;\n    cin >> n;\n    vector<int> a(n);\n    for (int i = 0; i < n; i++) {\n        cin >> a[i];\n    }\n    sort(a.begin(), a.end());\n    int ans = 0;\n    for (int i = 1; i < n; i++) {\n        ans += a[i] - a[i - 1];\n    }\n    cout << ans << endl;\n}\n\nint main() {\n    int t;\n    cin >> t;\n    while (t--) {\n        solve();\n    }\n    return 0;\n}",
+      "error_trace": "",
+      "run_results": []
+    }
+  ]
+}
